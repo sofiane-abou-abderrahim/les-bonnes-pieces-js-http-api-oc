@@ -28,7 +28,8 @@ export function sendReviewsAddListener() {
     const reviews = {
       pieceId: parseInt(event.target.querySelector('[name=piece-id]').value),
       user: event.target.querySelector('[name=user').value,
-      comment: event.target.querySelector('[name=comment]').value
+      comment: event.target.querySelector('[name=comment]').value,
+      nbStars: parseInt(event.target.querySelector('[name=nbStars]').value)
     };
 
     // Create the payload in a JSON format
