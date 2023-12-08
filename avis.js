@@ -7,6 +7,12 @@ export function reviewsAddListener() {
       const response = await fetch(`http://localhost:8081/pieces/${id}/avis`);
       const reviews = await response.json();
 
+      // Call setItem
+      window.localStorage.setItem(
+        `piece-reviews-${id}`,
+        JSON.stringify(reviews)
+      );
+
       const pieceElement = event.target.parentElement;
 
       const reviewsElement = document.createElement('p');
