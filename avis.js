@@ -11,9 +11,9 @@ export function reviewsAddListener() {
 
       const reviewsElement = document.createElement('p');
       for (let i = 0; i < reviews.length; i++) {
-        reviewsElement.innerHTML += `${reviews[i].utilisateur}: ${reviews[i].commentaire} <br>`;
+        reviewsElement.innerHTML += `${reviews[i].user}: ${reviews[i].comment} <br>`;
       }
-      pieceElement.appendChild(avisElement);
+      pieceElement.appendChild(reviewsElement);
     });
   }
 }
