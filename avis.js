@@ -23,5 +23,12 @@ export function sendReviewsAddListener() {
   reviewsForm.addEventListener('submit', function (event) {
     // Disable the default behavior of the browser
     event.preventDefault();
+
+    // Creating the object for the new reviews
+    const reviews = {
+      pieceId: parseInt(event.target.querySelector('[name=piece-id]').value),
+      user: event.target.querySelector('[name=user').value,
+      comment: event.target.querySelector('[name=comment]').value
+    };
   });
 }
