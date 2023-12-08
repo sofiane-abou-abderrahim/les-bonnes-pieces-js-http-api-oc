@@ -30,5 +30,8 @@ export function sendReviewsAddListener() {
       user: event.target.querySelector('[name=user').value,
       comment: event.target.querySelector('[name=comment]').value
     };
+
+    // Create the payload in a JSON format
+    const payload = JSON.stringify(reviews);
   });
 }
