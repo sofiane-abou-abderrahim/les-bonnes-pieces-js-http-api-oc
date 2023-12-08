@@ -1,9 +1,12 @@
-import { reviewsAddListener } from './avis.js';
+import { reviewsAddListener, sendReviewsAddListener } from './avis.js';
 
 // Retrieve parts from the JSON file
 // const pieces = await fetch('pieces-autos.json').then(pieces => pieces.json());
 const response = await fetch('http://localhost:8081/pieces');
 const pieces = await response.json();
+
+// Call the function to add the listener on the reviews form
+sendReviewsAddListener();
 
 // Function that generates the entire web page
 function generatePieces(pieces) {
