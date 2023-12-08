@@ -85,6 +85,18 @@ function generatePieces(pieces) {
 // Initial display of the page
 generatePieces(pieces);
 
+// Retrieving reviews potentially stored in localStorage
+for (let i = 0; i < pieces.length; i++) {
+  const id = pieces[i].id;
+  const reviewsJSON = window.localStorage.getItem(`piece-reviews-${id}`);
+  const reviews = JSON.parse(reviewsJSON);
+
+  if (reviews !== null) {
+    const pieceElement = document.querySelector(`article[data-id="${id}"]`);
+    displayReviews(pieceElement, reviews);
+  }
+}
+
 // sort button management
 const sortButton = document.querySelector('.btn-sort');
 
