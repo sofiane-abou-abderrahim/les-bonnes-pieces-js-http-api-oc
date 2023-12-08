@@ -5,6 +5,7 @@ export function reviewsAddListener() {
     piecesElements[i].addEventListener('click', async function (event) {
       const id = event.target.dataset.id;
       const response = await fetch(`http://localhost:8081/pieces/${id}/avis`);
+      const reviews = await response.json();
     });
   }
 }
