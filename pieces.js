@@ -206,3 +206,9 @@ maxPriceInput.addEventListener('input', function () {
   document.querySelector('.sheets').innerHTML = '';
   generatePieces(filteredPieces);
 });
+
+// Adding the listener to update localStorage data
+const updateButton = document.querySelector('.btn-update');
+updateButton.addEventListener('click', function () {
+  window.localStorage.removeItem('pieces');
+});
