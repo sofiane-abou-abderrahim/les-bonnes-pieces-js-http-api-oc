@@ -17,3 +17,10 @@ export function reviewsAddListener() {
     });
   }
 }
+
+export function sendReviewsAddListener() {
+  const reviewsForm = document.querySelector('.reviews-form');
+  reviewsForm.addEventListener('submit', function (event) {
+    /* ... */
+  });
+}
