@@ -41,6 +41,11 @@ function generatePieces(pieces) {
       ? 'En stock'
       : 'Rupture de stock';
 
+    // Create reviews button to display reviews
+    const reviewsButton = document.createElement('button');
+    reviewsButton.dataset.id = article.id;
+    reviewsButton.textContent = 'Afficher les avis';
+
     // Attach the article tag to the Sheets section
     sectionSheets.appendChild(pieceElement);
     // Attach the image to pieceElement (the article tag)
