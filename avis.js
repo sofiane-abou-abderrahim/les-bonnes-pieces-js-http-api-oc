@@ -6,6 +6,14 @@ export function reviewsAddListener() {
       const id = event.target.dataset.id;
       const response = await fetch(`http://localhost:8081/pieces/${id}/avis`);
       const reviews = await response.json();
+
+      const pieceElement = event.target.parentElement;
+
+      const reviewsElement = document.createElement('p');
+      for (let i = 0; i < reviews.length; i++) {
+        reviewsElement.innerHTML += `${reviews[i].utilisateur}: ${reviews[i].commentaire} <br>`;
+      }
+      pieceElement.appendChild(avisElement);
     });
   }
 }
