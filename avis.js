@@ -33,5 +33,12 @@ export function sendReviewsAddListener() {
 
     // Create the payload in a JSON format
     const payload = JSON.stringify(reviews);
+
+    // Call the fetch function with all the necessary information
+    fetch('http://localhost:8081/avis', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: payload
+    });
   });
 }
