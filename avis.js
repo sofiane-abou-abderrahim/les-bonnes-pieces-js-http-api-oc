@@ -15,14 +15,20 @@ export function reviewsAddListener() {
 
       const pieceElement = event.target.parentElement;
 
-      const reviewsElement = document.createElement('p');
-      for (let i = 0; i < reviews.length; i++) {
-        reviewsElement.innerHTML += `${reviews[i].user}: ${reviews[i].comment} <br>`;
-        reviewsElement.innerHTML += `${reviews[i].nbStars} <br>`;
-      }
-      pieceElement.appendChild(reviewsElement);
+      // Call the function
+      displayReviews(pieceElement, reviews);
     });
   }
+}
+
+// Created function to display reviews
+export function displayReviews(pieceElement, reviews) {
+  const reviewsElement = document.createElement('p');
+  for (let i = 0; i < reviews.length; i++) {
+    reviewsElement.innerHTML += `${reviews[i].user}: ${reviews[i].comment} <br>`;
+    reviewsElement.innerHTML += `${reviews[i].nbStars} <br>`;
+  }
+  pieceElement.appendChild(reviewsElement);
 }
 
 export function sendReviewsAddListener() {
