@@ -1,3 +1,5 @@
+import { reviewsAddListener } from './avis';
+
 // Retrieve parts from the JSON file
 // const pieces = await fetch('pieces-autos.json').then(pieces => pieces.json());
 const response = await fetch('pieces-autos.json');
@@ -49,6 +51,9 @@ function generatePieces(pieces) {
     pieceElement.appendChild(descriptionElement);
     pieceElement.appendChild(stockElement);
   }
+
+  // Call reviewsAddListener function
+  reviewsAddListener();
 }
 
 // Initial display of the page
