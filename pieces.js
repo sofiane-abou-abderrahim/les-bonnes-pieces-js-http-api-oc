@@ -1,4 +1,8 @@
-import { reviewsAddListener, sendReviewsAddListener } from './avis.js';
+import {
+  reviewsAddListener,
+  sendReviewsAddListener,
+  displayReviews
+} from './avis.js';
 
 // Retrieving pieces potentially stored in localStorage
 let pieces = window.localStorage.getItem('pieces');
