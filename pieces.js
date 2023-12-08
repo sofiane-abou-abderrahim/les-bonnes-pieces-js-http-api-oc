@@ -55,6 +55,8 @@ function generatePieces(pieces) {
     pieceElement.appendChild(categoryElement);
     pieceElement.appendChild(descriptionElement);
     pieceElement.appendChild(stockElement);
+    // appended reviews button to its parent
+    pieceElement.appendChild(reviewsButton);
   }
 
   // Call reviewsAddListener function
