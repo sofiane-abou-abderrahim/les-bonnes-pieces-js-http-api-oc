@@ -99,4 +99,8 @@ export async function displayReviewsGraphic() {
     document.querySelector('#reviews-graphic'),
     config
   );
+
+  // Retrieve pieces from localStorage
+  const piecesJSON = window.localStorage.getItem('pieces');
+  const pieces = JSON.parse(piecesJSON);
 }
