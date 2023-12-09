@@ -93,7 +93,11 @@ for (let i = 0; i < pieces.length; i++) {
 
   if (reviews !== null) {
     const pieceElement = document.querySelector(`article[data-id="${id}"]`);
-    displayReviews(pieceElement, reviews);
+
+    // Add a check to ensure pieceElement is not null before calling displayReviews
+    if (pieceElement) {
+      displayReviews(pieceElement, reviews);
+    }
   }
 }
 
