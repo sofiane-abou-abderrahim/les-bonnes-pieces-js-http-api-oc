@@ -103,4 +103,8 @@ export async function displayReviewsGraphic() {
   // Retrieve pieces from localStorage
   const piecesJSON = window.localStorage.getItem('pieces');
   const pieces = JSON.parse(piecesJSON);
+
+  // Calculate the number of comments
+  let nbAvailableComments = 0;
+  let nbUnvailableComments = 0;
 }
