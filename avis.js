@@ -56,3 +56,11 @@ export function sendReviewsAddListener() {
     });
   });
 }
+
+// Chart.js display reviews graphic
+export async function displayReviewsGraphic() {
+  // Calculate the total number of comments per quantity of stars awarded
+  const reviews = await fetch('http://localhost:8081/avis').then(reviews =>
+    reviews.json()
+  );
+}
