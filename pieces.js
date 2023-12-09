@@ -1,7 +1,8 @@
 import {
   reviewsAddListener,
   sendReviewsAddListener,
-  displayReviews
+  displayReviews,
+  displayReviewsGraphic
 } from './avis.js';
 
 // Retrieving pieces potentially stored in localStorage
@@ -232,3 +233,6 @@ const updateButton = document.querySelector('.btn-update');
 updateButton.addEventListener('click', function () {
   window.localStorage.removeItem('pieces');
 });
+
+// Call function to display chart graphic
+await displayReviewsGraphic();
