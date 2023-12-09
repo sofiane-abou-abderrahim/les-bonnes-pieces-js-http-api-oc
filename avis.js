@@ -64,11 +64,39 @@ export async function displayReviewsGraphic() {
     reviews.json()
   );
   // Create an array of 5 elements initialized to 0
-  const nb_commentaires = [0, 0, 0, 0, 0];
+  const nb_comments = [0, 0, 0, 0, 0];
 
   // Traverse through the reviews
-  for (let commentaire of avis) {
+  for (let comment of avis) {
     // Increment the elements in the list corresponding to the number of stars awarded
-    nb_commentaires[commentaire.nbEtoiles - 1]++;
+    nb_comments[comment.nbEtoiles - 1]++;
   }
+
+  ///// Prepare the configuration for the chart /////
+  // Legend that will be displayed on the left next to the horizontal bar
+  const labels = ['5', '4', '3', '2', '1'];
+  // Data and customization of the chart
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: 'Étoiles attribuées',
+        data: nb_comments.reverse(),
+        backgroundColor: 'rgba(255, 230, 0, 1)' // Yellow color
+      }
+    ]
+  };
+  // Final configuration object
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {
+      indexAxis: 'y'
+    }
+  };
+  // Render the chart in the canvas element
+  const reviewsGraphic = new Chart(
+    document.querySelector('#reviews-graphic'),
+    config
+  );
 }
