@@ -63,4 +63,6 @@ export async function displayReviewsGraphic() {
   const reviews = await fetch('http://localhost:8081/avis').then(reviews =>
     reviews.json()
   );
+  // Create an array of 5 elements initialized to 0
+  const nb_commentaires = [0, 0, 0, 0, 0];
 }
