@@ -136,4 +136,11 @@ export async function displayReviewsGraphic() {
       }
     ]
   };
+
+  // Final configuration object
+  const AvailableConfig = {
+    type: 'bar',
+    data: AvailableData
+  };
+  console.log(AvailableData);
 }
