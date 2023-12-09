@@ -121,4 +121,7 @@ export async function displayReviewsGraphic() {
       }
     }
   }
+
+  // Legend that will be displayed on the left next to the horizontal bar
+  const AvailableLabels = ['Disponibles', 'Non dispo.'];
 }
