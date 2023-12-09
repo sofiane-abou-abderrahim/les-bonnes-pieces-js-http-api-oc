@@ -124,4 +124,16 @@ export async function displayReviewsGraphic() {
 
   // Legend that will be displayed on the left next to the horizontal bar
   const AvailableLabels = ['Disponibles', 'Non dispo.'];
+
+  // Data and customization of the chart
+  const AvailableData = {
+    labels: AvailableLabels,
+    datasets: [
+      {
+        label: 'Nombre de commentaires',
+        data: [nbAvailableComments, nbUnvailableComments],
+        backgroundColor: 'rgba(0, 230, 255, 1)' // Turquoise color
+      }
+    ]
+  };
 }
