@@ -107,4 +107,18 @@ export async function displayReviewsGraphic() {
   // Calculate the number of comments
   let nbAvailableComments = 0;
   let nbUnvailableComments = 0;
+
+  // Iterate through the list of pieces
+  for (let i = 0; i < reviews.length; i++) {
+    const piece = pieces.find(p => p.id === reviews[i].pieceId);
+
+    // Increment the correct variable using an if-else condition
+    if (piece) {
+      if (piece.availability) {
+        nbAvailableComments++;
+      } else {
+        nbUnvailableComments++;
+      }
+    }
+  }
 }
