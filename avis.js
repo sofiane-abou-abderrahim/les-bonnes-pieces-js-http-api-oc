@@ -143,4 +143,7 @@ export async function displayReviewsGraphic() {
     data: AvailableData
   };
   console.log(AvailableData);
+
+  // Rendu du graphique dans l'élément canvas
+  new Chart(document.querySelector('#availables-graphic'), AvailableConfig);
 }
