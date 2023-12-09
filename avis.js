@@ -65,4 +65,10 @@ export async function displayReviewsGraphic() {
   );
   // Create an array of 5 elements initialized to 0
   const nb_commentaires = [0, 0, 0, 0, 0];
+
+  // Traverse through the reviews
+  for (let commentaire of avis) {
+    // Increment the elements in the list corresponding to the number of stars awarded
+    nb_commentaires[commentaire.nbEtoiles - 1]++;
+  }
 }
