@@ -67,9 +67,9 @@ export async function displayReviewsGraphic() {
   const nb_comments = [0, 0, 0, 0, 0];
 
   // Traverse through the reviews
-  for (let comment of avis) {
+  for (let comment of reviews) {
     // Increment the elements in the list corresponding to the number of stars awarded
-    nb_comments[comment.nbEtoiles - 1]++;
+    nb_comments[comment.nbStars - 1]++;
   }
 
   ///// Prepare the configuration for the chart /////
